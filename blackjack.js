@@ -1,27 +1,39 @@
 // blackjack.js
-let cardOne =8;
-let cardTwo = 6;
-let sum = cardOne + cardTwo;
-let cardOneBank = 5;
-let cardTwoBank = 5;
-let cardThreeBank = 6;
-let cardFourBank = 4;
-let cardThree = 7;
-sum += cardThree;
+let cardPlay =[9, 5];
+let sumPlayer = cardPlay.reduce((sum, card) => sum + card, 0);
+let cardBank = [7, 5];
+let sumBanker = cardBank.reduce((sum, card) => sum + card, 0);
 
-if (sum > 21) {
- console.log('You lost');
+
+sumPlayer += 7;
+
+
+if(sumPlayer === 21){
+    console.log(sumPlayer); 
+    console.log(sumBanker); 
+    console.log("black win");
 }
-console.log(`You have ${sum} points`);
-let bankSum = cardOneBank + cardTwoBank + cardThreeBank + cardFourBank;
-
-if (bankSum > 21 || (sum <= 21 && sum > bankSum)) {
-    console.log('You win');
-} else if (bankSum === sum && bankSum<21 && sum<21){
-    console.log('Draw');
-} else {
-    console.log('Bank wins');
+else if (sumPlayer<21){
+    while(sumBanker<17){
+        sumBanker += 6;
+        if(sumPlayer>sumBanker || sumPlayer === 21){
+            console.log(sumPlayer); 
+            console.log(sumBanker); 
+            console.log("you win");
+        } else if (sumPlayer === sumBanker){
+            console.log(sumPlayer); 
+            console.log(sumBanker); 
+            console.log("draw");
+        } else if (sumPlayer<sumBanker && sumBanker === 21){
+            console.log(sumPlayer);
+            console.log(sumBanker); 
+            console.log("bank win");
+        }
+    }
+}
+else{
+    console.log(sumPlayer); 
+    console.log(sumBanker); 
+    console.log("you lose");
 }
 
-
-// 카드 패가 같을때의 조건이 없음
