@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typing Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="title">
+	<img src="./images/logo.png" alt="Logo" class="logo">
+</header>
+
+<section>
+	<div class="section_wrap">
+		<ul class="main_typing">
+			<li>
+				<p class="explain_text">Practice your typing skills with a quote from Sherlock Holmes. Click <b>start</b> to begin!</p>
+			</li>
+			<li>
+				<p id="quote"></p>
+				<p id="message"></p>
+			</li>
+			<li class="input_area">
+				<input type="text" aria-label="current word" id="typed-value" placeholder="typing here..." disabled />
+				<button type="button" id="start">Start</button>
+			</li>
+			<li class="score_area">
+				<div id="score-box">
+					<p>Score</p><br>
+					<ul id="score-list"></ul>
+				</div>
+			</li>
+		</ul>
+
+		
+	</div>
+</section>
+
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close"><img src="./images/x.png"></span>
+        <p id="result-message"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
