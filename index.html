@@ -3,35 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>My Carbon Trigger</title>
 </head>
 <body>
-    <script>
-        function getName(name){
-            return `안녕하세요 저는 ${name}입니다.`;
-        }
-        const message1 = getName('이소현');
+    <img class="top-image" src="./images/plants-people.png" alt="plants and people">
+    <div class="title">
+        <p>Welcome to Your Personal Carbon Trigger!</p>
+    </div>
+    <!-- form area -->
+    <form class="form-data" autocomplete="on">
+        <div class="form-area-wrap">
+            <div class="form-title">
+                <P>New? Add your Information</P>
+            </div>
+            <div class="input-region">
+                <label for="region">Region Name</label>
+                <input type="text" id="region" required class="region-name">
+            </div>
+            <div class="input-api">
+                <label for="api">Your API Key from tmrow</label>
+                <input type="text" id="api" required class="api-key">
+            </div>
+            <button class="search-btn">Submit</button>
+        </div>
         
-        function getMajor(major){
-            return `대학에서 ${major}을 전공하고 있습니다`;
-        }
-        const message2 = getMajor('컴퓨터공학');
+    </form>
+    <!-- result area -->
+    <div class="result">
+        <div class="loading">loading...</div>
+        <div class="errors"></div>
+        <div class="data"></div>
+        <div class="result-container">
+            <p><strong>Region: </strong><span class="my-region"></span></p>
+            <p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p>
+            <p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p>
+        </div>
+        <button class="clear-btn">Change region</button>
+    </div>
 
-        var number = 0;
-        setInterval(() => {
-            document.body.innerHTML = "";
-            console.log(number);
-            if(number === 0){
-                document.write(message1);
-                number++;
-            }
-            else{
-                document.write(message2);
-                number = 0;
-            }
-
-        }, 3000);
-       
-    </script>
+    <script src="../src/index.js"></script>
 </body>
 </html>
