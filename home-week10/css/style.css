@@ -1,0 +1,68 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff3e3;
+    margin: 0;
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+  }
+  
+  .fortune-container {
+    text-align: center;
+  }
+  
+  .fortune-button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 20px 40px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+  }
+  
+  .fortune-button:hover {
+    background-color: #ffaa00;
+  }
+  
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  li {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+  
+  li img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .quote {
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+    visibility: hidden;
+  }
+  
+  .quote.visible {
+    visibility: visible;
+  }
+  
+  .message {
+    font-size: 20px;
+    font-style: normal;
+    color: #555;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  
+  .author {
+    font-size: 16px;
+    color: #888;
+  }
+  
